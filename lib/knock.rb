@@ -15,9 +15,13 @@ module Knock
   mattr_accessor :token_signature_algorithm
   self.token_signature_algorithm = "HS256"
 
-  # Configure the algorithm used to encode the token
+  # Configure the header used to encode the token for jwk
   mattr_accessor :token_signature_header
   self.token_signature_header = {}
+
+  # Configure the header used to decode the token for jwk
+  mattr_accessor :token_public_token
+  self.token_public_token = {}
 
   # Configure the key used to sign tokens.
   mattr_accessor :token_secret_signature_key

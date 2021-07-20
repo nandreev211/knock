@@ -45,7 +45,7 @@ module Knock
     def options
       verify_claims.merge({
         algorithm: Knock.token_signature_algorithm,
-      })
+      }).merge(Knock.token_public_token)
     end
 
     def claims
