@@ -15,7 +15,8 @@ module Knock
         @payload = claims.merge(payload)
         @token = JWT.encode @payload,
                             secret_key,
-                            Knock.token_signature_algorithm
+                            Knock.token_signature_algorithm,
+                            Knock.token_signature_header
       end
     end
 
