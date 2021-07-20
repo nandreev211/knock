@@ -20,8 +20,8 @@ module Knock
   self.token_signature_header = {}
 
   # Configure the header used to decode the token for jwk
-  mattr_accessor :token_public_token
-  self.token_public_token = {}
+  mattr_accessor :token_public_jwk_header
+  self.token_public_jwk_header = {}
 
   # Configure the key used to sign tokens.
   mattr_accessor :token_secret_signature_key
